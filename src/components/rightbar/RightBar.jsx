@@ -28,22 +28,43 @@ export default function RightBar({profile}) {
         <h4 className="rightbarTitle">User information</h4>
         <div className="rightbarInfo">
           <div className="rightbarInfoItem">
-            <span className="rightInfoKey">City: </span>
-            <span className="rightInfoValue">Lucknow</span>
-          </div>
-        </div>
-        <div className="rightbarInfoItem">
-            <span className="rightInfoKey">Occupation: </span>
-            <span className="rightInfoValue">Student</span>
+            <span className="rightbarInfoKey">City: </span>
+            <span className="rightbarInfoValue">Lucknow</span>
           </div>
           <div className="rightbarInfoItem">
-            <span className="rightInfoKey">Relationship: </span>
-            <span className="rightInfoValue">Single</span>
+            <span className="rightbarInfoKey">Occupation: </span>
+            <span className="rightbarInfoValue">Student</span>
           </div>
+          <div className="rightbarInfoItem">
+            <span className="rightbarInfoKey">Relationship: </span>
+            <span className="rightbarInfoValue">Single</span>
+          </div>
+        </div>
+
           <h4 className="rightbarTitle">User Friends</h4>
           <div className="rightbarFollowings">
             <div className="rightbarFollowing">
-              <img src="" alt="" className="rightbarFollowingImg" />
+              <img src="assets/friends/devansh.jpg" alt="" className="rightbarFollowingImg" />
+              <span className="rightbarFollowingName">Devansh Modwel</span>
+            </div>
+            <div className="rightbarFollowing">
+              <img src="assets/friends/devansh.jpg" alt="" className="rightbarFollowingImg" />
+              <span className="rightbarFollowingName">Devansh Modwel</span>
+            </div>
+            <div className="rightbarFollowing">
+              <img src="assets/friends/devansh.jpg" alt="" className="rightbarFollowingImg" />
+              <span className="rightbarFollowingName">Devansh Modwel</span>
+            </div>
+            <div className="rightbarFollowing">
+              <img src="assets/friends/devansh.jpg" alt="" className="rightbarFollowingImg" />
+              <span className="rightbarFollowingName">Devansh Modwel</span>
+            </div>
+            <div className="rightbarFollowing">
+              <img src="assets/friends/devansh.jpg" alt="" className="rightbarFollowingImg" />
+              <span className="rightbarFollowingName">Devansh Modwel</span>
+            </div>
+            <div className="rightbarFollowing">
+              <img src="assets/friends/devansh.jpg" alt="" className="rightbarFollowingImg" />
               <span className="rightbarFollowingName">Devansh Modwel</span>
             </div>
           </div>
@@ -54,7 +75,7 @@ export default function RightBar({profile}) {
   return (
     <div className="rightbar">
       <div className="rightbarWrapper">
-        <ProfileRightbar/>
+        {profile? <ProfileRightbar/>:<HomeRightbar/>}
       </div>
     </div>
   )
